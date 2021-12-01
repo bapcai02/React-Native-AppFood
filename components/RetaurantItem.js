@@ -2,53 +2,10 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export function RetaurantItem () {
-    const localRetaurants = [
-        {
-            name: "Farmhouse kitchen VietNam Cuisine",
-            image_url: "http://static.asiawebdirect.com/m/bangkok/portals/vietnam/homepage/hanoi/dining/allParagraphs/BucketComponent/ListingContainer/011110/image/home-hanoi-restaurant-vietnam.jpg",
-            categories: ["Cafe", "Bar"],
-            price: "100$",
-            review: 1332,
-            rating: 4.56
-        },
-        {
-            name: "Farmhouse kitchen VietNam Cuisine",
-            image_url: "http://static.asiawebdirect.com/m/bangkok/portals/vietnam/homepage/hanoi/dining/allParagraphs/BucketComponent/ListingContainer/011110/image/home-hanoi-restaurant-vietnam.jpg",
-            categories: ["Cafe", "Bar"],
-            price: "100$",
-            review: 1332,
-            rating: 4.56
-        },
-        {
-            name: "Farmhouse kitchen VietNam Cuisine",
-            image_url: "http://static.asiawebdirect.com/m/bangkok/portals/vietnam/homepage/hanoi/dining/allParagraphs/BucketComponent/ListingContainer/011110/image/home-hanoi-restaurant-vietnam.jpg",
-            categories: ["Cafe", "Bar"],
-            price: "100$",
-            review: 1332,
-            rating: 4.56
-        },
-        {
-            name: "Farmhouse kitchen VietNam Cuisine",
-            image_url: "http://static.asiawebdirect.com/m/bangkok/portals/vietnam/homepage/hanoi/dining/allParagraphs/BucketComponent/ListingContainer/011110/image/home-hanoi-restaurant-vietnam.jpg",
-            categories: ["Cafe", "Bar"],
-            price: "100$",
-            review: 1332,
-            rating: 4.56
-        },
-        {
-            name: "Farmhouse kitchen VietNam Cuisine",
-            image_url: "http://static.asiawebdirect.com/m/bangkok/portals/vietnam/homepage/hanoi/dining/allParagraphs/BucketComponent/ListingContainer/011110/image/home-hanoi-restaurant-vietnam.jpg",
-            categories: ["Cafe", "Bar"],
-            price: "100$",
-            review: 1332,
-            rating: 4.56
-        }
-    ];
-
+export function RetaurantItem (props) {
     return (
         <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
-            { localRetaurants.map((item, index) => (
+            { props.retaurantData.map((item, index) => (
                 <View key={index} style={{ marginTop: 10, padding: 15, backgroundColor: "white"}}>
                     <RetaurantImage  image_url={item.image_url} />
                     <RetaurantInfo name={item.name} review={item.review} rating={item.rating} />
