@@ -3,6 +3,7 @@ import { SafeAreaView, View } from 'react-native';
 import { Categories } from '../components/Categories';
 import { HeaderTab } from '../components/HeaderTab';
 import { SearchBar } from '../components/SearchBar';
+import { RetaurantItem } from '../components/RetaurantItem';
 
 export function Home () {
     return (
@@ -12,6 +13,7 @@ export function Home () {
                 <SearchBar />
             </View>
             <Categories />
+            <RetaurantItem />
         </SafeAreaView>
     )
 }
